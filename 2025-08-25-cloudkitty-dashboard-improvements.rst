@@ -45,7 +45,9 @@ details can be found in the `InfluxDB Line Protocol Tutorial`_ .
 I wrote python scripts to quickly generate a file full of randomised data, with
 the tag and field keys/values necessary for each metric type. LINK to github?
 These can then be exported to InfluxDB with the following curl command,
-"curl -i -XPOST 'http://localhost:8086/write?db=DATABASE_NAME' --data-binary @file.txt",
+.. code-block:: console
+    curl -i -XPOST 'http://localhost:8086/write?db=DATABASE_NAME' --data-binary @file.txt
+
 where file.txt is a textfile written in line protocol form.
 
 .. _InfluxDB Line Protocol Tutorial:
@@ -69,6 +71,12 @@ When combined with a Django form, it is easy to fetch the data in the time
 period requested, by using the form fields and passing these into the CloudKitty
 API calls.
 
+.. image:: datepicker_example_gif.gif
+    :width: 200px
+    :align: center
+    :height: 100px
+    :alt: alternate text
+
 Interactive legends
 ^^^^^^^^^^^^^^^^^^^
 An interactive legend has been added to both the pie chart and the Rickshaw
@@ -84,12 +92,22 @@ In addition to the interactive legend, I thought it would be useful to display
 the percentage that a metric takes up, which shows when you hover over the
 segment. An extended hover displays the metric name.
 
+.. figure:: pie_chart_demo.gif
+    :width: 200px
+    :align: center
+    :height: 100px
+    :alt: alternate text
+    :figclass: align-center
+
+    This gif demonstrates the animations and hover-over behaviour for the pie
+    chart.
+
 Grouping functionality
 ^^^^^^^^^^^^^^^^^^^^^^
 For both rating panels, which display the breakdown of rates by Resource type,
 the ability to group the ratings by certain attributes (which are configurable)
 has been added. This is achieved by using a custom form and a set of checkboxes.
- ‘Type’ is set to be the default if no list has been provided.
+'[Type]' is set to be the default if no list has been provided.
 
 Upgraded admin/rating panel to use v2 API
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -97,3 +115,15 @@ Upgraded admin/rating panel to use v2 API
 The admin rating panel has been upgraded to use v2 of the CloudKitty API, to
 match the project/rating panel. This allows for filtering and a generally more
 useful API call, providing greater detail in response.
+
+.. image:: groupby_default.jpg
+    :width: 200px
+    :align: center
+    :height: 100px
+    :alt: alternate text
+
+.. image:: groupby_all_selected.jpg
+:width: 200px
+:align: center
+:height: 100px
+:alt: alternate text
