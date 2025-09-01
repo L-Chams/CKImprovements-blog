@@ -1,4 +1,4 @@
-Improving the CloudKitty Dashboard
+Fresh Purrspectives - Improving the CloudKitty User Experience
 ##################################
 
 :date: 2025-08-22 11:30
@@ -65,7 +65,8 @@ Datepicker
 ^^^^^^^^^^
 The datepicker is used to improve control over the data displayed in the
 dashboard. The datepicker implemented is similar to one in another part of the
-Horizon Dashboard. It uses Bootstrap Datepicker, which combines Bootstrap and
+`Horizon Dashboard <https://docs.openstack.org/horizon/latest/>`__. It uses `Bootstrap Datepicker <https://bootstrap-datepicker.readthedocs.io/en/latest/#>`__
+, which combines Bootstrap and
 jQuery to provide an interactive datepicker widget in the Bootstrap style. In
 addition to the start and end datepickers, I have also included preset ranges
 under some neat dropdown buttons, with the ability to traverse to the
@@ -84,11 +85,12 @@ API calls.
 
 Interactive legends
 ^^^^^^^^^^^^^^^^^^^
-An interactive legend has been added to both the pie chart and the Rickshaw
-graph. Both allow you to hide certain metrics, but the Rickshaw graph allows for
-reordering (layers) of the data, and highlighting the metric that is currently being
-hovered over (on the legend). Animations have been added to the pie chart for
-when metrics are added/removed.
+An interactive legend has been added to both the `d3 pie chart <https://d3js.org/d3-shape/pie>`__
+and the `Rickshaw graph <https://tech.shutterstock.com/rickshaw/>`__. Both allow you
+to hide certain metrics, but the Rickshaw graph allows for reordering (layers) of
+the data, and highlighting the metric that is currently being hovered over (on
+the legend). Animations have been added to the pie chart for when metrics are
+added/removed.
 
 Hover-over labels and percentages for pie chart
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
