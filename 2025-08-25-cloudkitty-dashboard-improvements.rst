@@ -2,7 +2,7 @@ Fresh Purrspectives - Improving the CloudKitty User Experience
 ##################################
 
 :date: 2025-08-22 11:30
-:modified: 2025-09-01 11:30
+:modified: 2025-09-04 11:30
 :tags: cloudkitty, openstack, dashboard
 :category: Deployment
 :slug: cloudkitty-dashboard-improvements
@@ -42,7 +42,7 @@ In order to see variation in the data displayed on the graph, I found it best to
 populate the database with randomised data that I generated myself. CloudKitty
 uses an older version of InfluxDB, 1.6.3 to be precise, which meant a lot of the
 'easier' ways to import data were not yet introduced. I managed to import data
-by using a text file in line protocol firm, an interestingly structured file, 
+by using a text file in line protocol form, an interestingly structured file, 
 more details can be found in the `InfluxDB Line Protocol Reference
 <https://docs.influxdata.com/influxdb/v1/write_protocols/line_protocol_reference/>`_ .
 I wrote python scripts to quickly generate a file full of randomised data, with
@@ -61,7 +61,7 @@ where file.txt is a textfile written in line protocol form.
 
 Changes
 -------
-Datepicker
+`Datepicker <https://review.opendev.org/c/openstack/cloudkitty-dashboard/+/958035>`__
 ^^^^^^^^^^
 The datepicker is used to improve control over the data displayed in the
 dashboard. The datepicker implemented is similar to one in another part of the
@@ -108,14 +108,14 @@ segment. An extended hover displays the metric name.
     This gif demonstrates the animations and hover-over behaviour for the pie
     chart.
 
-Upgraded admin/rating panel to use v2 API
+`Upgraded admin/rating panel to use v2 API <https://review.opendev.org/c/openstack/cloudkitty-dashboard/+/958033>`__
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The admin rating panel has been upgraded to use v2 of the CloudKitty API, to
 match the project/rating panel. This allows for filtering and a generally more
 useful API call, providing more detailed responses.
 
-Grouping functionality
+`Grouping functionality <https://review.opendev.org/c/openstack/cloudkitty-dashboard/+/958034>`__
 ^^^^^^^^^^^^^^^^^^^^^^
 For both rating panels, which by default display the breakdown of rates by Resource Type,
 the ability to group the ratings by certain attributes (which are configurable)
